@@ -17,12 +17,12 @@ const NFTCard = ({ url, stake, tokenId }) => {
   const stakingContract = useContract({
     address: Staking.address,
     abi: Staking.abi,
-    signerOrProvider: provider,
+    signerOrProvider: signer,
   });
   const nftContract = useContract({
     address: BuidlNFT.address,
     abi: BuidlNFT.abi,
-    signerOrProvider: provider,
+    signerOrProvider: signer,
   });
   const stakeNft = async () => {
     try {
